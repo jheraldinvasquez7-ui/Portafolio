@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Andrea Silva</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            min-height: 100vh;
+            text-align: center;
+            padding: 60px 20px;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        .tarjeta {
+            width: 280px;
+            background: #ffffff;
+            border-radius: 16px;
+            margin: 0 auto;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .encabezado {
+            background: #7c6bb0;
+            padding: 30px 20px 20px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #a99cd4;
+            margin: 0 auto 14px;
+            box-shadow: 0 0 0 4px #ffffff;
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nombre {
+            font-size: 20px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .profesion {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .descripcion {
+            padding: 18px 22px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .descripcion p {
+            font-size: 11px;
+            color: #666666;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .contacto {
+            padding: 16px 22px;
+        }
+
+        .fila {
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .fila-ultima {
+            margin-bottom: 0;
+        }
+
+        .icono {
+            float: left;
+            font-size: 14px;
+            width: 24px;
+            margin-right: 10px;
+            line-height: 20px;
+            color: #7c6bb0;
+        }
+
+        .dato {
+            margin-left: 34px;
+            text-align: left;
+        }
+
+        .dato-etiq {
+            font-size: 8px;
+            font-weight: 700;
+            color: #9b8ec4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dato-valor {
+            font-size: 11px;
+            color: #333333;
+        }
+
+        .btn {
+            clear: both;
+            padding: 16px 22px 20px;
+        }
+
+        .btn-accion {
+            background: #7c6bb0;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 28px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(124, 107, 176, 0.4);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-accion:hover {
+            background: #6a59a0;
+            box-shadow: 0 6px 20px rgba(124, 107, 176, 0.6);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <div class="encabezado">
+            <div class="avatar">
+                <img src="https://via.placeholder.com/90x90/a99cd4/ffffff?text=AS" alt="Andrea Silva">
+            </div>
+            <h1 class="nombre">Andrea Silva</h1>
+            <p class="profesion">Marketing Digital</p>
+        </div>
+
+        <div class="descripcion">
+            <p>
+                Profesional apasionada por el marketing digital, con experiencia
+                en redes sociales y campañas publicitarias. Comprometida con el
+                crecimiento de marcas y contenido atractivo.
+            </p>
+        </div>
+
+        <div class="contacto">
+
+            <div class="fila">
+                <span class="icono">✉</span>
+                <div class="dato">
+                    <div class="dato-etiq">Correo</div>
+                    <div class="dato-valor">andreasilva@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="fila">
+                <span class="icono">📞</span>
+                <div class="dato">
+                    <div class="dato-etiq">Teléfono</div>
+                    <div class="dato-valor">301 456 7890</div>
+                </div>
+            </div>
+
+            <div class="fila fila-ultima">
+                <span class="icono">📍</span>
+                <div class="dato">
+                    <div class="dato-etiq">Ubicación</div>
+                    <div class="dato-valor">San Gil, Santander</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTÓN -->
+        <div class="btn">
+            <button class="btn-accion">Conectar conmigo</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

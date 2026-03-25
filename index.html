@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos | Portafolio de Estudiante</title>
+    <style>
+        :root {
+            --primary: #7B4FA6;
+            --secondary: #9B59C4;
+            --accent: #B47FD4;
+            --light-accent: #DFC2F2;
+            --dark: #1E0D2E;
+            --light: #F7F2FD;
+            --white: #ffffff;
+            --gray: #6B5880;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Palatino Linotype', Palatino, serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: #7B4FA6;
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(123, 79, 166, 0.4);
+        }
+
+        .header .titulo { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+        .header .subtitulo { font-size: 1.2rem; opacity: 0.9; }
+
+        .hero {
+            background: var(--white);
+            padding: 50px 0;
+            text-align: center;
+            border-bottom: 2px solid #DFC2F2;
+        }
+
+        .hero h2 { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; color: var(--gray); margin-bottom: 10px; }
+
+        .main { padding: 60px 0; }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .proyecto-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(123, 79, 166, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid #DFC2F2;
+        }
+
+        .proyecto-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(123, 79, 166, 0.3);
+        }
+
+        .proyecto-imagen {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .proyecto-1 { background: #7B4FA6; }
+        .proyecto-2 { background: #9B59C4; }
+        .proyecto-3 { background: #B47FD4; }
+        .proyecto-4 { background: #6A3D9A; }
+
+        .numero-proyecto {
+            font-size: 5rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            transition: transform 0.3s ease;
+        }
+
+        .proyecto-card:hover .numero-proyecto { transform: scale(1.1) rotate(5deg); }
+        .proyecto-card:hover .proyecto-imagen { transform: scale(1.05); }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(123, 79, 166, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .proyecto-card:hover .overlay { opacity: 1; }
+
+        .ver-mas { color: var(--white); font-size: 1.2rem; font-weight: bold; }
+
+        .proyecto-info { padding: 20px; }
+        .proyecto-info h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 10px; }
+        .proyecto-info p { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; }
+
+        .etiqueta {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .footer {
+            background: #1E0D2E;
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        .footer p { opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .header .titulo { font-size: 1.8rem; }
+            .hero h2 { font-size: 1.5rem; }
+            .galeria { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="titulo">Mi Portafolio de Proyectos</h1>
+            <p class="subtitulo">HTML y CSS | Aprendizaje SENA</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenidos a mi portafolio</h2>
+            <p>Soy estudiante de Análisis y Desarrollo de Software, aprendiendo a construir el mundo digital.</p>
+            <p>Cada proyecto que encuentras aquí representa un reto superado y una habilidad nueva adquirida.</p>
+            <p>Este es el comienzo de mi camino en la programación, y apenas estoy empezando.</p>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">💜 Mis Proyectos</h2>
+            <div class="galeria">
+
+                <a href="./Hoja de vida/Index.html" class="proyecto-card">
+                    <div class="proyecto-imagen proyecto-1">
+                        <span class="numero-proyecto">01</span>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Hoja de vida</h3>
+                        <p>Diseño y estructura de una hoja de vida digital aplicando etiquetas y estilos básicos de HTML y CSS.</p>
+                        <span class="etiqueta">Básico</span>
+                    </div>
+                </a>
+
+                <a href="./Tarjeta de presemtacion/index.html" class="proyecto-card">
+                    <div class="proyecto-imagen proyecto-2">
+                        <span class="numero-proyecto">02</span>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Tarjeta de Presentacion</h3>
+                        <p>Creación de una tarjeta de presentación personal usando HTML y CSS, practicando diseño de componentes visuales.</p>
+                        <span class="etiqueta">Intermedio</span>
+                    </div>
+                </a>
+
+                <a href="./Quien Soy/index.html" class="proyecto-card">
+                    <div class="proyecto-imagen proyecto-3">
+                        <span class="numero-proyecto">03</span>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Quien Soy</h3>
+                        <p>Página de presentación personal donde organicé información sobre mí misma aplicando estructura y estilos propios.</p>
+                        <span class="etiqueta">Avanzado</span>
+                    </div>
+                </a>
+
+                <a href="./proyecto3/index.html" class="proyecto-card">
+                    <div class="proyecto-imagen proyecto-4">
+                        <span class="numero-proyecto">04</span>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Proyecto 4</h3>
+                        <p>Falta realizar</p>
+                        <span class="etiqueta">....</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 | Portafolio de Estudiante | SENA</p>
+        </div>
+    </footer>
+</body>
+</html>
