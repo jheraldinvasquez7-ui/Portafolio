@@ -122,287 +122,273 @@ Lizeth Jheraldin Vasquez Ayala
 </footer>
 
 </body>
-    <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box; /* hace que el tamaño incluya padding */
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body{
-    overflow-x: hidden; /* evita que salga scroll horizontal (lo blanco) */
+html, body {
+    overflow-x: hidden;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#fff;
-    color:#333;
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
 }
 
-
-/* =========================
-   CONTENEDOR → es la "línea imaginaria"
-   centra TODO el contenido de la página
-   ========================= */
-.contenedor{
-    max-width:1100px; 
-    width:100%;     
-    margin:0 auto;    
-    padding:0 20px;   
+.contenedor {
+    max-width: 1100px; 
+    width: 100%;    
+    margin: 0 auto;    
+    padding: 0 20px;
 }
 
-.barra-superior{
-    background:#713377; /* fondo morado */
+.barra-superior {
+    background: rgb(113, 51, 119); 
+    overflow: hidden;
 }
 
-.barra-superior .contenedor{
-    display:flex; /* pone logo y menú en fila */
-    justify-content:space-between; /* separa izquierda y derecha */
-    align-items:center; /* centra verticalmente */
-    height:60px;
+.barra-superior .contenedor {
+    height: 60px;
+    line-height: 60px;
 }
 
-/* LOGO → texto de tu nombre */
-.logo{
-    color:#ccc;
+.logo {
+    color: rgb(204, 204, 204);
+    float: left;
+    font-weight: bold;
 }
 
-/* MENU → links de navegación */
-.menu a{
-    color:#ccc;
-    text-decoration:none;
-    margin-left:15px; /* separación entre links */
+.menu {
+    float: right;
 }
 
-.menu a:hover{
-    color:#fff; /* efecto al pasar el mouse */
+.menu a {
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+    margin-left: 20px;
+    float: left;
 }
 
-
-.seccion-quiensoy{
-    margin:40px 0; /* espacio arriba y abajo */
+.menu a:hover {
+    color: rgb(255, 255, 255);
 }
 
-.seccion-quiensoy .contenedor{
-    display:flex; 
+.seccion-quiensoy {
+    padding: 60px 0;
+    overflow: hidden;
 }
 
-/* IMAGEN → lado izquierdo */
-.columna-imagen{
-    width:500px;
-    text-align:center;
+.columna-imagen {
+    width: 450px;
+    float: left;
+    text-align: center;
 }
 
-.columna-imagen img{
-    width:300px;
+.columna-imagen img {
+    width: 300px;
 }
 
-/* TEXTO → lado derecho */
-.columna-texto{
-    width:560px;
+.columna-texto {
+    width: 580px;
+    float: right;
 }
 
-/* TITULO "Quién soy" */
-.columna-texto h2{
-    font-size:40px;
-    color:#713377;
-    margin-bottom:40px;
+.columna-texto h2 {
+    font-size: 45px;
+    color: rgb(113, 51, 119);
+    margin-bottom: 30px;
 }
 
-/* PÁRRAFO */
-.columna-texto p{
-    line-height:1.4; /* separación entre líneas */
+.columna-texto p {
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-/* BOTÓN "Leer más" */
-.boton-leer{
-    display:inline-block;
-    background:#713377;
-    color:#fff;
-    padding:10px 20px;
-    margin-top:15px;
-    text-decoration:none;
+.boton-leer {
+    background: rgb(113, 51, 119);
+    color: rgb(255, 255, 255);
+    padding: 12px 25px;
+    text-decoration: none;
 }
 
-
-/*contenedor morado*/
-.seccion-perfil{
-    background:#713377;
-    text-align:center; 
-    padding:20px 20px;
+.columna-texto .boton {
+    text-align: center;
 }
 
-/* FOTO REDONDA */
-.imagen-perfil img{
-    width:200px;
-    border-radius:50%; /* hace círculo */
-    border:5px solid #fff;
+.seccion-perfil {
+    background: rgb(113, 51, 119);
+    text-align: center; 
+    padding: 60px 0;
+    overflow: hidden;
 }
 
-/* FRASE */
-.texto-frase{
-    color:#fff;
-    margin:20px 0;
-    font-size:20px;
+.imagen-perfil img {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    border: 5px solid rgb(255, 255, 255);
 }
 
-/* AUTOR */
-.autor{
-    color:#fff;
+.texto-frase {
+    color: rgb(255, 255, 255);
+    margin: 25px 0;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
 }
 
-.seccion-proyectos{
-    margin:40px 0;
+.autor {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
-.seccion-proyectos h2{
-    font-size:40px;
-    text-align:center;
-    color:#713377;
-    margin-bottom:30px;
+.seccion-proyectos {
+    padding: 60px 0;
+    overflow: hidden;
 }
 
-/* CONTENEDOR DE TARJETAS */
-.seccion-proyectos .contenedor{
-    display:flex; /* pone tarjetas en fila */
-    justify-content:center; /* las centra */
-    gap:20px; /* espacio entre tarjetas */
+.seccion-proyectos .contenedor {
+    overflow: hidden;
 }
 
-/* TARJETA INDIVIDUAL */
-.tarjeta-proyecto{
-    width:250px;
-    height:450px;
-    border:1px solid #ddd;
+.seccion-proyectos h2 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(113, 51, 119);
+    margin-bottom: 40px;
 }
 
-/* IMAGEN DE TARJETA */
-.tarjeta-proyecto img{
-    width:247px;
-    height:150px;
+.tarjeta-proyecto {
+    width: 250px;
+    height: 520px;
+    border: 1px solid rgb(221, 221, 221);
+    float: left;
+    margin-right: 15px;
+    background: rgb(255, 255, 255);
 }
 
-/* CONTENIDO DE TARJETA */
-.contenido-proyecto{
-    padding:10px;
-    text-align:center;
+.tarjeta-proyecto:last-child {
+    margin-right: 0;
 }
 
-/* TITULO */
-.contenido-proyecto h3{
-    margin:10px 0 5px 0;
+.tarjeta-proyecto img {
+    width: 248px;
+    height: 160px;
 }
 
-/* TEXTO */
-.texto{
-    font-size:14px;
-    margin-bottom:10px;
-    line-height:1.4;
+.contenido-proyecto {
+    padding: 15px;
+    text-align: center;
 }
 
-/* BOTÓN */
-.boton-proyecto{
-    display:inline-block;
-    background:#713377;
-    color:#fff;
-    padding:8px 15px;
-    text-decoration:none;
+.contenido-proyecto h3 {
+    margin: 10px 0;
+    font-size: 20px;
 }
 
-
-
-.pie-pagina{
-    background:#713377;
-    color:#fff;
-    padding:15px 0;
+.texto {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-/* TEXTO DEL FOOTER */
-.pie-pagina .contenedor{
-    text-align:right; 
+.boton-proyecto {
+    background: rgb(113, 51, 119);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.pie-pagina {
+    background: rgb(113, 51, 119);
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.pie-pagina .contenedor {
+    text-align: right; 
 }
 
 
-/*
-/* MEDIA QUERY TABLET → permite que las tarjetas bajen en 2 filas */
-@media (max-width: 1072px){
-    .seccion-proyectos .contenedor{
-        flex-wrap: wrap;
-        justify-content:center;
+
+@media (max-width: 1095px) {
+    .contenedor {
+        display: flex;       
+        flex-wrap: wrap;    
+        justify-content: center; 
     }
-}
 
-
-/* MEDIA QUERY MÓVIL → pasa "quién soy" de horizontal a vertical */
-@media (max-width: 600px){
-    .seccion-quiensoy .contenedor{
-        flex-direction: column;
+    .seccion-quiensoy .contenedor {
+        flex-direction: column; 
         align-items: center;
     }
 
-    .columna-imagen,
-    .columna-texto{
-        width:500px;
-    }
-
-    .columna-texto{
-        text-align: justify;
-    }
-
-    .boton{
+    .columna-imagen, 
+    .columna-texto {
+        width: 100%; 
+        float: none; 
         text-align: center;
     }
 
-    .columna-texto h2{
-        text-align: center;
+    .tarjeta-proyecto {
+        float: none;
+        margin: 15px;
     }
 }
 
-
-/* MEDIA QUERY FOOTER → centra el texto en pantallas pequeñas */
-@media (max-width: 408px){
-    .pie-pagina .contenedor{
-        text-align:center;
-    }
-}
-
-
-/* MEDIA QUERY AJUSTE MEDIO → reduce ancho de columnas */
-@media (max-width: 524px){
-    .columna-imagen,
-    .columna-texto{
-        width:400px;
-    }
-}
-
-
-/* MEDIA QUERY AJUSTE PEQUEÑO → columnas más angostas */
-@media (max-width: 432px){
-    .columna-imagen,
-    .columna-texto{
-        width:250px;
-    }
-}
-
-
-/* MEDIA QUERY NAVBAR → menú se pone vertical */
-@media (max-width: 518px){
-    .barra-superior .contenedor{
+@media (max-width: 600px) {
+    .barra-superior .contenedor {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: auto;
-        padding:10px 0;
+        line-height: normal;
+        padding: 15px 0;
     }
 
-    .menu{
-        margin-top:10px;
-        text-align:center;
+    .logo {
+        float: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .menu {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .menu a {
+        margin: 5px 0;
+        float: none;
     }
 
-    .menu a{
-        display:block;
-        margin:5px 0;
+    .tarjeta-proyecto {
+        margin: 10px 0;
     }
 }
-    </style>
+
+/* Forzar centrado del footer en pantallas muy pequeñas */
+@media (max-width: 420px) {
+    .pie-pagina .contenedor {
+        text-align: center !important;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .pie-pagina .contenedor {
+        text-align: center;
+    }
+}
+  </style>
 </html>
