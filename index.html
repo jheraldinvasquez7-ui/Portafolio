@@ -6,20 +6,25 @@
     <title>Mis Proyectos | Portafolio de Estudiante</title>
     <style>
         :root {
-            --primary: #7B4FA6;
-            --secondary: #9B59C4;
-            --accent: #B47FD4;
-            --light-accent: #DFC2F2;
-            --dark: #1E0D2E;
-            --light: #F7F2FD;
+            --primary: #6C2D82;        /* Morado profundo */
+            --secondary: #9B4DCA;      /* Morado medio */
+            --accent: #C77DFF;         /* Morado claro */
+            --orange: #F27A3D;         /* Naranja vibrante */
+            --orange-light: #F9A86C;   /* Naranja claro */
+            --orange-pastel: #FCD5B8;  /* Naranja pastel */
+            --light-accent: #E8D0F5;   /* Lila suave */
+            --dark: #1A0A2E;           /* Morado oscuro */
+            --light: #FDF8F3;          /* Fondo cálido */
             --white: #ffffff;
             --gray: #6B5880;
+            --gradient-main: linear-gradient(135deg, #6C2D82, #F27A3D);
+            --gradient-card: linear-gradient(135deg, #9B4DCA, #F9A86C);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Palatino Linotype', Palatino, serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
@@ -31,62 +36,138 @@
             padding: 0 20px;
         }
 
+        /* ========== HEADER ========== */
         .header {
-            background: #7B4FA6;
+            background: var(--gradient-main);
             color: var(--white);
-            padding: 40px 0;
+            padding: 50px 0;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(123, 79, 166, 0.4);
+            box-shadow: 0 4px 20px rgba(108, 45, 130, 0.4);
+            position: relative;
+            overflow: hidden;
         }
 
-        .header .titulo { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
-        .header .subtitulo { font-size: 1.2rem; opacity: 0.9; }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(242, 122, 61, 0.2);
+            border-radius: 50%;
+        }
 
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -10%;
+            width: 250px;
+            height: 250px;
+            background: rgba(199, 125, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .header .titulo {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .header .subtitulo {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+
+        .header .emoji-deco {
+            font-size: 2.5rem;
+            display: block;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== HERO ========== */
         .hero {
             background: var(--white);
             padding: 50px 0;
             text-align: center;
-            border-bottom: 2px solid #DFC2F2;
+            border-bottom: 3px solid var(--orange-pastel);
         }
 
-        .hero h2 { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
-        .hero p { font-size: 1.1rem; color: var(--gray); margin-bottom: 10px; }
+        .hero h2 {
+            font-size: 2.2rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
 
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+
+        /* ========== MAIN ========== */
         .main { padding: 60px 0; }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             color: var(--primary);
+            position: relative;
         }
 
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-main);
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        /* ========== GRID DE PROYECTOS ========== */
         .galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
         }
 
         .proyecto-card {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(123, 79, 166, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(108, 45, 130, 0.12);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             text-decoration: none;
             color: inherit;
             display: block;
-            border: 1px solid #DFC2F2;
+            border: 2px solid transparent;
+            position: relative;
         }
 
         .proyecto-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(123, 79, 166, 0.3);
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(108, 45, 130, 0.25);
+            border-color: var(--orange);
         }
 
+        /* ========== IMÁGENES CON DEGRADADOS ========== */
         .proyecto-imagen {
             position: relative;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -94,77 +175,134 @@
             transition: transform 0.3s ease;
         }
 
-        .proyecto-1 { background: #7B4FA6; }
-        .proyecto-2 { background: #9B59C4; }
-        .proyecto-3 { background: #B47FD4; }
-        .proyecto-4 { background: #6A3D9A; }
-        .proyecto-5 { background: #E8836B; }
-        .proyecto-6 { background: #4A9B8E; }
+        .proyecto-card:hover .proyecto-imagen { transform: scale(1.02); }
+
+        /* Colores de fondo para cada proyecto */
+        .proyecto-1 { background: linear-gradient(135deg, #6C2D82, #9B4DCA); }
+        .proyecto-2 { background: linear-gradient(135deg, #8B3AA8, #C77DFF); }
+        .proyecto-3 { background: linear-gradient(135deg, #F27A3D, #F9A86C); }
+        .proyecto-4 { background: linear-gradient(135deg, #E85D3A, #F27A3D); }
+        .proyecto-5 { background: linear-gradient(135deg, #6C2D82, #F27A3D); }
+        .proyecto-6 { background: linear-gradient(135deg, #9B4DCA, #F9A86C); }
+        .proyecto-7 { background: linear-gradient(135deg, #C77DFF, #F27A3D); }
 
         .numero-proyecto {
-            font-size: 5rem;
-            font-weight: bold;
-            color: rgba(255, 255, 255, 0.2);
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.15);
             position: absolute;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
+            font-family: 'Arial Black', sans-serif;
         }
 
-        .proyecto-card:hover .numero-proyecto { transform: scale(1.1) rotate(5deg); }
-        .proyecto-card:hover .proyecto-imagen { transform: scale(1.05); }
+        .proyecto-card:hover .numero-proyecto {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .icono-proyecto {
+            font-size: 4rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
         .overlay {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(123, 79, 166, 0.85);
+            background: rgba(108, 45, 130, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
 
         .proyecto-card:hover .overlay { opacity: 1; }
 
-        .ver-mas { color: var(--white); font-size: 1.2rem; font-weight: bold; }
-
-        .proyecto-info { padding: 20px; }
-        .proyecto-info h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 10px; }
-        .proyecto-info p { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; }
-
-        .etiqueta {
-            display: inline-block;
-            background: var(--primary);
+        .ver-mas {
             color: var(--white);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 40px;
+            transition: all 0.3s ease;
         }
 
-        .etiqueta-floristeria { background: #E8836B; }
-        .etiqueta-tecnologia { background: #4A9B8E; }
-        .etiqueta-video { background: #B47FD4; }
+        .ver-mas:hover {
+            background: white;
+            color: var(--primary);
+        }
 
+        /* ========== INFO DEL PROYECTO ========== */
+        .proyecto-info { padding: 24px 22px 26px; }
+
+        .proyecto-info h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .proyecto-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        /* ========== ETIQUETAS ========== */
+        .etiqueta {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .etiqueta-basico { background: var(--primary); }
+        .etiqueta-intermedio { background: var(--secondary); }
+        .etiqueta-avanzado { background: var(--orange); }
+        .etiqueta-floristeria { background: linear-gradient(135deg, #C77DFF, #F27A3D); }
+        .etiqueta-tecnologia { background: linear-gradient(135deg, #6C2D82, #F9A86C); }
+        .etiqueta-video { background: linear-gradient(135deg, #9B4DCA, #F27A3D); }
+        .etiqueta-factura { background: linear-gradient(135deg, #E85D3A, #F9A86C); }
+
+        /* ========== FOOTER ========== */
         .footer {
-            background: #1E0D2E;
+            background: var(--dark);
             color: var(--white);
             text-align: center;
-            padding: 30px 0;
+            padding: 35px 0;
             margin-top: 60px;
+            border-top: 4px solid var(--orange);
         }
 
         .footer p { opacity: 0.8; }
+        .footer .footer-heart { color: var(--orange); }
 
+        /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
-            .header .titulo { font-size: 1.8rem; }
-            .hero h2 { font-size: 1.5rem; }
+            .header .titulo { font-size: 2rem; }
+            .hero h2 { font-size: 1.6rem; }
             .galeria { grid-template-columns: 1fr; }
+            .proyecto-imagen { height: 180px; }
+            .numero-proyecto { font-size: 4rem; }
+        }
+
+        @media (max-width: 480px) {
+            .header .titulo { font-size: 1.6rem; }
+            .section-title { font-size: 1.6rem; }
+            .proyecto-info h3 { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
+            <span class="emoji-deco"></span>
             <h1 class="titulo">Mi Portafolio de Proyectos</h1>
             <p class="subtitulo">HTML y CSS | Aprendizaje SENA</p>
         </div>
@@ -172,10 +310,10 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Bienvenidos a mi portafolio</h2>
+            <h2> Bienvenidos a mi portafolio</h2>
             <p>Soy estudiante de Análisis y Desarrollo de Software, aprendiendo a construir el mundo digital.</p>
             <p>Cada proyecto que encuentras aquí representa un reto superado y una habilidad nueva adquirida.</p>
-            <p>Este es el comienzo de mi camino en la programación, y apenas estoy empezando.</p>
+            <p> Este es el comienzo de mi camino en la programación, y apenas estoy empezando. </p>
         </div>
     </section>
 
@@ -184,49 +322,67 @@
             <h2 class="section-title"> Mis Proyectos</h2>
             <div class="galeria">
 
-                <!-- Proyecto 1: Hoja de Vida -->
+                <!-- ====== PROYECTO 1: Hoja de Vida ====== -->
                 <a href="./Hoja de vida/Index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-1">
                         <span class="numero-proyecto">01</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
                         <h3>Hoja de Vida</h3>
                         <p>Diseño y estructura de una hoja de vida digital aplicando etiquetas y estilos básicos de HTML y CSS.</p>
-                        <span class="etiqueta">Básico</span>
+                        <span class="etiqueta etiqueta-basico">Básico</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 2: Tarjeta de Presentación -->
+                <!-- ====== PROYECTO 2: Tarjeta de Presentación ====== -->
                 <a href="./Tarjeta de presemtacion/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-2">
                         <span class="numero-proyecto">02</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
                         <h3> Tarjeta de Presentación</h3>
                         <p>Creación de una tarjeta de presentación personal usando HTML y CSS, practicando diseño de componentes visuales.</p>
-                        <span class="etiqueta">Intermedio</span>
+                        <span class="etiqueta etiqueta-intermedio">Intermedio</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 3: Quien Soy -->
+                <!-- ====== PROYECTO 3: Quien Soy ====== -->
                 <a href="./Quien Soy/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-3">
                         <span class="numero-proyecto">03</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3> Quien Soy</h3>
+                        <h3>Quien Soy</h3>
                         <p>Página de presentación personal donde organicé información sobre mí misma aplicando estructura y estilos propios.</p>
-                        <span class="etiqueta">Avanzado</span>
+                        <span class="etiqueta etiqueta-avanzado">Avanzado</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 4: Floristería Jardín de Lulú -->
-                <a href="./jardin-lulu/index.html" class="proyecto-card">
+                <!-- ====== PROYECTO 4: Factura ====== -->
+                <a href="./factura/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-4">
                         <span class="numero-proyecto">04</span>
+                        <span class="icono-proyecto"></span>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Factura</h3>
+                        <p>Diseño y estructura de una factura digital aplicando etiquetas, tablas y estilos básicos de HTML y CSS.</p>
+                        <span class="etiqueta etiqueta-factura">Factura</span>
+                    </div>
+                </a>
+
+                <!-- ====== PROYECTO 5: Jardín de Lulú ====== -->
+                <a href="./jardin-lulu/index.html" class="proyecto-card">
+                    <div class="proyecto-imagen proyecto-5">
+                        <span class="numero-proyecto">05</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
@@ -236,10 +392,11 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 5: Tienda de Tecnología -->
+                <!-- ====== PROYECTO 6: Tienda de Tecnología ====== -->
                 <a href="./tienda-tecnologia/index.html" class="proyecto-card">
-                    <div class="proyecto-imagen proyecto-5">
-                        <span class="numero-proyecto">05</span>
+                    <div class="proyecto-imagen proyecto-6">
+                        <span class="numero-proyecto">06</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
@@ -249,14 +406,15 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 6: Videos - Detrás de los Arreglos -->
+                <!-- ====== PROYECTO 7: Detrás de los Arreglos ====== -->
                 <a href="./videos-florales/index.html" class="proyecto-card">
-                    <div class="proyecto-imagen proyecto-6">
-                        <span class="numero-proyecto">06</span>
+                    <div class="proyecto-imagen proyecto-7">
+                        <span class="numero-proyecto">07</span>
+                        <span class="icono-proyecto"></span>
                         <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3>🎬 Detrás de los Arreglos</h3>
+                        <h3> Detrás de los Arreglos</h3>
                         <p>Galería de videos mostrando el proceso creativo de arreglos florales. Diseño visual y experiencia inmersiva.</p>
                         <span class="etiqueta etiqueta-video">Videos</span>
                     </div>
@@ -268,7 +426,8 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 | Portafolio de Estudiante | SENA</p>
+            <p> &copy; 2026 | Portafolio de Estudiante | SENA </p>
+            <p style="margin-top: 8px; font-size: 0.9rem;">Hecho con <span class="footer-heart"></span> y mucho café </p>
         </div>
     </footer>
 </body>
