@@ -6,19 +6,18 @@
     <title>Mis Proyectos | Portafolio de Estudiante</title>
     <style>
         :root {
-            --primary: #6C2D82;        /* Morado profundo */
-            --secondary: #9B4DCA;      /* Morado medio */
-            --accent: #C77DFF;         /* Morado claro */
-            --orange: #F27A3D;         /* Naranja vibrante */
-            --orange-light: #F9A86C;   /* Naranja claro */
-            --orange-pastel: #FCD5B8;  /* Naranja pastel */
-            --light-accent: #E8D0F5;   /* Lila suave */
-            --dark: #1A0A2E;           /* Morado oscuro */
-            --light: #FDF8F3;          /* Fondo cálido */
+            --primary: #4A1A6B;        /* Morado muy oscuro */
+            --secondary: #6B2D8C;      /* Morado oscuro */
+            --tertiary: #8B4BA8;       /* Morado medio */
+            --quaternary: #A96EC4;     /* Morado claro */
+            --light-purple: #C9A0DC;   /* Morado muy claro */
+            --pale-purple: #E8D5F0;    /* Morado pastel */
+            --dark: #1A0A2E;           /* Morado casi negro */
+            --light: #F8F4FC;          /* Fondo lila muy claro */
             --white: #ffffff;
             --gray: #6B5880;
-            --gradient-main: linear-gradient(135deg, #6C2D82, #F27A3D);
-            --gradient-card: linear-gradient(135deg, #9B4DCA, #F9A86C);
+            --shadow: rgba(74, 26, 107, 0.2);
+            --shadow-hover: rgba(74, 26, 107, 0.35);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,11 +37,11 @@
 
         /* ========== HEADER ========== */
         .header {
-            background: var(--gradient-main);
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary));
             color: var(--white);
             padding: 50px 0;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(108, 45, 130, 0.4);
+            box-shadow: 0 4px 20px var(--shadow);
             position: relative;
             overflow: hidden;
         }
@@ -54,7 +53,7 @@
             right: -20%;
             width: 300px;
             height: 300px;
-            background: rgba(242, 122, 61, 0.2);
+            background: rgba(169, 110, 196, 0.15);
             border-radius: 50%;
         }
 
@@ -65,7 +64,7 @@
             left: -10%;
             width: 250px;
             height: 250px;
-            background: rgba(199, 125, 255, 0.15);
+            background: rgba(201, 160, 220, 0.1);
             border-radius: 50%;
         }
 
@@ -80,18 +79,10 @@
 
         .header .subtitulo {
             font-size: 1.3rem;
-            opacity: 0.95;
+            opacity: 0.9;
             position: relative;
             z-index: 1;
             font-weight: 300;
-        }
-
-        .header .emoji-deco {
-            font-size: 2.5rem;
-            display: block;
-            margin-top: 10px;
-            position: relative;
-            z-index: 1;
         }
 
         /* ========== HERO ========== */
@@ -99,15 +90,12 @@
             background: var(--white);
             padding: 50px 0;
             text-align: center;
-            border-bottom: 3px solid var(--orange-pastel);
+            border-bottom: 3px solid var(--pale-purple);
         }
 
         .hero h2 {
             font-size: 2.2rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             margin-bottom: 15px;
         }
 
@@ -133,7 +121,7 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: var(--gradient-main);
+            background: linear-gradient(135deg, var(--primary), var(--quaternary));
             margin: 12px auto 0;
             border-radius: 4px;
         }
@@ -149,7 +137,7 @@
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(108, 45, 130, 0.12);
+            box-shadow: 0 4px 15px var(--shadow);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             text-decoration: none;
             color: inherit;
@@ -160,11 +148,11 @@
 
         .proyecto-card:hover {
             transform: translateY(-12px) scale(1.01);
-            box-shadow: 0 20px 40px rgba(108, 45, 130, 0.25);
-            border-color: var(--orange);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+            border-color: var(--quaternary);
         }
 
-        /* ========== IMÁGENES CON DEGRADADOS ========== */
+        /* ========== IMÁGENES CON DEGRADADOS MORADOS ========== */
         .proyecto-imagen {
             position: relative;
             height: 220px;
@@ -177,40 +165,34 @@
 
         .proyecto-card:hover .proyecto-imagen { transform: scale(1.02); }
 
-        /* Colores de fondo para cada proyecto */
-        .proyecto-1 { background: linear-gradient(135deg, #6C2D82, #9B4DCA); }
-        .proyecto-2 { background: linear-gradient(135deg, #8B3AA8, #C77DFF); }
-        .proyecto-3 { background: linear-gradient(135deg, #F27A3D, #F9A86C); }
-        .proyecto-4 { background: linear-gradient(135deg, #E85D3A, #F27A3D); }
-        .proyecto-5 { background: linear-gradient(135deg, #6C2D82, #F27A3D); }
-        .proyecto-6 { background: linear-gradient(135deg, #9B4DCA, #F9A86C); }
-        .proyecto-7 { background: linear-gradient(135deg, #C77DFF, #F27A3D); }
+        /* Todos los proyectos en tonos morados */
+        .proyecto-1 { background: linear-gradient(135deg, #2D0A47, #4A1A6B); }
+        .proyecto-2 { background: linear-gradient(135deg, #4A1A6B, #6B2D8C); }
+        .proyecto-3 { background: linear-gradient(135deg, #6B2D8C, #8B4BA8); }
+        .proyecto-4 { background: linear-gradient(135deg, #3D0F5A, #6B2D8C); }
+        .proyecto-5 { background: linear-gradient(135deg, #8B4BA8, #A96EC4); }
+        .proyecto-6 { background: linear-gradient(135deg, #4A1A6B, #A96EC4); }
+        .proyecto-7 { background: linear-gradient(135deg, #2D0A47, #8B4BA8); }
 
         .numero-proyecto {
             font-size: 5.5rem;
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.12);
             position: absolute;
             transition: transform 0.4s ease;
             font-family: 'Arial Black', sans-serif;
+            letter-spacing: 2px;
         }
 
         .proyecto-card:hover .numero-proyecto {
             transform: scale(1.15) rotate(-5deg);
         }
 
-        .icono-proyecto {
-            font-size: 4rem;
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
         .overlay {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(108, 45, 130, 0.8);
+            background: rgba(74, 26, 107, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -264,11 +246,11 @@
 
         .etiqueta-basico { background: var(--primary); }
         .etiqueta-intermedio { background: var(--secondary); }
-        .etiqueta-avanzado { background: var(--orange); }
-        .etiqueta-floristeria { background: linear-gradient(135deg, #C77DFF, #F27A3D); }
-        .etiqueta-tecnologia { background: linear-gradient(135deg, #6C2D82, #F9A86C); }
-        .etiqueta-video { background: linear-gradient(135deg, #9B4DCA, #F27A3D); }
-        .etiqueta-factura { background: linear-gradient(135deg, #E85D3A, #F9A86C); }
+        .etiqueta-avanzado { background: var(--tertiary); }
+        .etiqueta-factura { background: var(--quaternary); }
+        .etiqueta-floristeria { background: linear-gradient(135deg, var(--secondary), var(--quaternary)); }
+        .etiqueta-tecnologia { background: linear-gradient(135deg, var(--primary), var(--tertiary)); }
+        .etiqueta-video { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); }
 
         /* ========== FOOTER ========== */
         .footer {
@@ -277,11 +259,10 @@
             text-align: center;
             padding: 35px 0;
             margin-top: 60px;
-            border-top: 4px solid var(--orange);
+            border-top: 4px solid var(--quaternary);
         }
 
         .footer p { opacity: 0.8; }
-        .footer .footer-heart { color: var(--orange); }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
@@ -302,7 +283,6 @@
 <body>
     <header class="header">
         <div class="container">
-            <span class="emoji-deco"></span>
             <h1 class="titulo">Mi Portafolio de Proyectos</h1>
             <p class="subtitulo">HTML y CSS | Aprendizaje SENA</p>
         </div>
@@ -310,29 +290,28 @@
 
     <section class="hero">
         <div class="container">
-            <h2> Bienvenidos a mi portafolio</h2>
+            <h2>Bienvenidos a mi portafolio</h2>
             <p>Soy estudiante de Análisis y Desarrollo de Software, aprendiendo a construir el mundo digital.</p>
             <p>Cada proyecto que encuentras aquí representa un reto superado y una habilidad nueva adquirida.</p>
-            <p> Este es el comienzo de mi camino en la programación, y apenas estoy empezando. </p>
+            <p>Este es el comienzo de mi camino en la programación, y apenas estoy empezando.</p>
         </div>
     </section>
 
     <main class="main">
         <div class="container">
-            <h2 class="section-title"> Mis Proyectos</h2>
+            <h2 class="section-title">Mis Proyectos</h2>
             <div class="galeria">
 
                 <!-- ====== PROYECTO 1: Hoja de Vida ====== -->
                 <a href="./Hoja de vida/Index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-1">
                         <span class="numero-proyecto">01</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
                         <h3>Hoja de Vida</h3>
                         <p>Diseño y estructura de una hoja de vida digital aplicando etiquetas y estilos básicos de HTML y CSS.</p>
-                        <span class="etiqueta etiqueta-basico">Básico</span>
+                        <span class="etiqueta etiqueta-basico">Basico</span>
                     </div>
                 </a>
 
@@ -340,11 +319,10 @@
                 <a href="./Tarjeta de presemtacion/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-2">
                         <span class="numero-proyecto">02</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3> Tarjeta de Presentación</h3>
+                        <h3>Tarjeta de Presentación</h3>
                         <p>Creación de una tarjeta de presentación personal usando HTML y CSS, practicando diseño de componentes visuales.</p>
                         <span class="etiqueta etiqueta-intermedio">Intermedio</span>
                     </div>
@@ -354,8 +332,7 @@
                 <a href="./Quien Soy/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-3">
                         <span class="numero-proyecto">03</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
                         <h3>Quien Soy</h3>
@@ -368,8 +345,7 @@
                 <a href="./factura/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-4">
                         <span class="numero-proyecto">04</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
                         <h3>Factura</h3>
@@ -382,13 +358,12 @@
                 <a href="./jardin-lulu/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-5">
                         <span class="numero-proyecto">05</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3> Jardín de Lulú</h3>
+                        <h3>Jardín de Lulú</h3>
                         <p>Página web para una floristería con catálogo, galería, eventos y videos. Diseño elegante tipo boutique floral.</p>
-                        <span class="etiqueta etiqueta-floristeria">Floristería</span>
+                        <span class="etiqueta etiqueta-floristeria">Floristeria</span>
                     </div>
                 </a>
 
@@ -396,13 +371,12 @@
                 <a href="./tienda-tecnologia/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-6">
                         <span class="numero-proyecto">06</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3> Tienda de Tecnología</h3>
+                        <h3>Tienda de Tecnología</h3>
                         <p>E-commerce de productos tecnológicos con diseño moderno, catálogo de productos y carrito de compras.</p>
-                        <span class="etiqueta etiqueta-tecnologia">Tecnología</span>
+                        <span class="etiqueta etiqueta-tecnologia">Tecnologia</span>
                     </div>
                 </a>
 
@@ -410,11 +384,10 @@
                 <a href="./videos-florales/index.html" class="proyecto-card">
                     <div class="proyecto-imagen proyecto-7">
                         <span class="numero-proyecto">07</span>
-                        <span class="icono-proyecto"></span>
-                        <div class="overlay"><span class="ver-mas">Ver Proyecto →</span></div>
+                        <div class="overlay"><span class="ver-mas">Ver Proyecto</span></div>
                     </div>
                     <div class="proyecto-info">
-                        <h3> Detrás de los Arreglos</h3>
+                        <h3>Detrás de los Arreglos</h3>
                         <p>Galería de videos mostrando el proceso creativo de arreglos florales. Diseño visual y experiencia inmersiva.</p>
                         <span class="etiqueta etiqueta-video">Videos</span>
                     </div>
@@ -426,8 +399,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p> &copy; 2026 | Portafolio de Estudiante | SENA </p>
-            <p style="margin-top: 8px; font-size: 0.9rem;">Hecho con <span class="footer-heart"></span> y mucho café </p>
+            <p>&copy; 2026 | Portafolio de Estudiante | SENA</p>
         </div>
     </footer>
 </body>
