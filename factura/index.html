@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Factura</title>
+</head>
+<body>
+
+<main class="factura">
+
+  <!-- ENCABEZADO -->
+  <header class="fila">
+    <div class="columna columna-clara encabezado-izquierda">
+      <img src="/img/ChatGPT Image 16 jun 2026, 04_21_03 a.m..png" alt="Logo" class="logo" />
+      <div class="marca">
+        <h1 class="marca-nombre">NOMBRE DE LA EMPRESA</h1>
+        <p class="marca-eslogan">ESPACIO PARA EL ESLOGAN DE LA MARCA</p>
+      </div>
+    </div>
+    <div class="columna columna-oscura encabezado-derecha">
+      <h2 class="titulo-factura">FACTURA</h2>
+    </div>
+  </header>
+
+  <!-- NOTAS / META -->
+  <section class="fila">
+    <div class="columna columna-clara notas-izquierda">
+      <div class="bloque-notas">
+        <h3 class="bloque-titulo">Notas adicionales</h3>
+        <p class="texto-suave">
+          Texto adicional de ejemplo para la factura,<br/>
+          información importante para el cliente,<br/>
+          detalles del servicio o producto,<br/>
+          y observaciones necesarias.
+        </p>
+      </div>
+      <div class="bloque-notas bloque-notas-derecha">
+        <h3 class="bloque-titulo">Facturar a:</h3>
+        <p class="texto-fuerte">JUAN PÉREZ</p>
+        <p class="texto-suave">
+          Calle Lago Verde #123<br/>
+          Ciudad, Departamento<br/>
+          País
+        </p>
+      </div>
+    </div>
+    <div class="columna columna-oscura meta">
+      <div class="meta-elemento">
+        <span class="meta-etiqueta">FECHA DE FACTURA</span>
+        <span class="meta-valor">03/11/2018</span>
+      </div>
+      <div class="meta-elemento">
+        <span class="meta-etiqueta">FECHA DE VENCIMIENTO</span>
+        <span class="meta-valor">03/12/2018</span>
+      </div>
+      <div class="meta-elemento">
+        <span class="meta-etiqueta">NÚMERO DE FACTURA</span>
+        <span class="meta-valor">#4206</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLA -->
+  <section class="tabla-contenedor">
+    <div class="tabla">
+      <div class="tabla-encabezado fila">
+        <div class="columna columna-clara tabla-izquierda">
+          <div class="celda celda-num">#</div>
+          <div class="celda celda-desc">Descripción del producto</div>
+          <div class="celda celda-precio">Precio</div>
+        </div>
+        <div class="columna columna-oscura tabla-derecha">
+          <div class="celda celda-cantidad">Cantidad</div>
+          <div class="celda celda-total">Total</div>
+        </div>
+      </div>
+
+      <div class="tabla-fila fila">
+        <div class="columna columna-clara tabla-izquierda">
+          <div class="celda celda-num">1</div>
+          <div class="celda celda-desc">Artículo 1</div>
+          <div class="celda celda-precio">$30.50</div>
+        </div>
+        <div class="columna columna-oscura tabla-derecha">
+          <div class="celda celda-cantidad">3</div>
+          <div class="celda celda-total">$91.50</div>
+        </div>
+      </div>
+
+      <div class="tabla-fila fila">
+        <div class="columna columna-clara tabla-izquierda">
+          <div class="celda celda-num">2</div>
+          <div class="celda celda-desc">Artículo 2</div>
+          <div class="celda celda-precio">$50.00</div>
+        </div>
+        <div class="columna columna-oscura tabla-derecha">
+          <div class="celda celda-cantidad">1</div>
+          <div class="celda celda-total">$50.00</div>
+        </div>
+      </div>
+
+      <div class="tabla-fila fila">
+        <div class="columna columna-clara tabla-izquierda">
+          <div class="celda celda-num">3</div>
+          <div class="celda celda-desc">Artículo 3</div>
+          <div class="celda celda-precio">$70.00</div>
+        </div>
+        <div class="columna columna-oscura tabla-derecha">
+          <div class="celda celda-cantidad">5</div>
+          <div class="celda celda-total">$350.00</div>
+        </div>
+      </div>
+
+      <div class="tabla-fila fila">
+        <div class="columna columna-clara tabla-izquierda">
+          <div class="celda celda-num">4</div>
+          <div class="celda celda-desc">Artículo 4</div>
+          <div class="celda celda-precio">$20.00</div>
+        </div>
+        <div class="columna columna-oscura tabla-derecha">
+          <div class="celda celda-cantidad">2</div>
+          <div class="celda celda-total">$40.00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOTALES -->
+  <section class="fila totales-fila">
+    <div class="columna columna-clara totales-izquierda">
+      <div class="totales-etiquetas">
+        <div class="linea-total"><span class="texto-fuerte">Subtotal</span><span>$531.50</span></div>
+        <div class="linea-total"><span class="texto-fuerte">Impuestos</span><span>$63.78</span></div>
+        <div class="linea-total"><span class="texto-fuerte">Envío</span><span>$12.00</span></div>
+        <div class="linea-total"><span class="texto-fuerte">Descuento</span><span>-$15.00</span></div>
+        <div class="linea-total"><span class="texto-fuerte etiqueta-total">TOTAL</span><span class="texto-fuerte">$592.28</span></div>
+      </div>
+    </div>
+    <div class="columna columna-oscura totales-derecha">
+      <div class="linea-total" data-etiqueta="Subtotal"><span>$531.50</span></div>
+      <div class="linea-total" data-etiqueta="Impuestos"><span>$63.78</span></div>
+      <div class="linea-total" data-etiqueta="Envío"><span>$12.00</span></div>
+      <div class="linea-total" data-etiqueta="Descuento"><span>-$15.00</span></div>
+      <div class="linea-total" data-etiqueta="TOTAL"><span class="texto-fuerte">$592.28</span></div>
+    </div>
+  </section>
+
+  <!-- TÉRMINOS + PAGO + FIRMA -->
+  <section class="fila pie-fila">
+    <div class="columna columna-clara pie-izquierda">
+      <div class="terminos">
+        <h3 class="bloque-titulo">Términos y condiciones</h3>
+        <p class="texto-suave">
+          El cliente acepta las condiciones establecidas<br/>
+          para el pago y entrega de los productos<br/>
+          o servicios incluidos en esta factura.
+        </p>
+      </div>
+
+      <div class="pago">
+        <h3 class="bloque-titulo">Método de pago</h3>
+        <div class="opciones-pago">
+          <label class="opcion-pago"><span class="radio"></span> Efectivo / Débito</label>
+          <label class="opcion-pago"><span class="radio"></span> Cheque</label>
+          <label class="opcion-pago"><span class="radio"></span> Tarjeta de crédito</label>
+        </div>
+
+        <div class="campo-pago">
+          <span class="etiqueta-pago">Nombre titular</span>
+          <span class="input-pago input-pago-grande"></span>
+        </div>
+        <div class="campo-pago">
+          <span class="etiqueta-pago">Número de tarjeta</span>
+          <span class="input-pago input-pago-mediano"></span>
+          <span class="subetiequeta-pago">Exp</span>
+          <span class="input-pago input-pago-pequeño"></span>
+          <span class="subetiequeta-pago">CV</span>
+          <span class="input-pago input-pago-pequeño"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="columna columna-oscura firma">
+      <div class="firma-interior">
+        <span class="linea-firma"></span>
+        <span class="texto-firma">Firma</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+<style>
+  /* ===== Reset básico ===== */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #9fb1b1;
+    color: #2b2b2b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+
+  /* ===== Contenedor principal ===== */
+  .factura {
+    display: flex;
+    flex-direction: column;
+    width: 880px;
+    max-width: 100%;
+    background-color: #333d3e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .fila {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columna { display: flex; flex-direction: column; }
+
+  .columna-clara { width: 560px; background-color: #ffffff; }
+  .columna-oscura { width: 320px; background-color: #394346; color: #ffffff; }
+
+  /* ===== ENCABEZADO ===== */
+  .encabezado-izquierda {
+    background-color: #e6e6e6;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 28px;
+  }
+  .encabezado-derecha {
+    background-color: #394346;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 28px;
+  }
+
+  .logo { width: 48px; height: 48px; flex-shrink: 0; object-fit: contain; }
+  .marca { display: flex; flex-direction: column; gap: 4px; }
+  .marca-nombre { font-size: 20px; font-weight: 800; letter-spacing: 2px; color: #2b2b2b; }
+  .marca-eslogan { font-size: 11px; letter-spacing: 2px; color: #777; }
+  .titulo-factura { font-size: 32px; font-weight: 800; letter-spacing: 6px; color: #ffffff; }
+
+  /* ===== NOTAS / META ===== */
+  .notas-izquierda {
+    flex-direction: row;
+    padding: 24px 28px;
+    gap: 24px;
+  }
+  .bloque-notas { display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto; }
+  .bloque-notas-derecha { align-items: flex-end; text-align: right; }
+
+  .bloque-titulo { font-size: 14px; font-weight: 700; color: #2b2b2b; }
+  .texto-suave { color: #6e6e6e; font-size: 12px; line-height: 1.5; }
+  .texto-fuerte { font-weight: 700; font-size: 13px; }
+
+  .meta {
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    gap: 12px;
+  }
+  .meta-elemento { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .meta-etiqueta { font-size: 11px; letter-spacing: 1px; color: #cfcfcf; text-align: center; }
+  .meta-valor { font-size: 13px; color: #ffffff; }
+
+  /* ===== TABLA ===== */
+  .tabla-contenedor {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    background-color: #f2f2f2;
+  }
+  .tabla {
+    display: flex;
+    flex-direction: column;
+    min-width: 720px;
+    background-color: #f2f2f2;
+  }
+  .tabla .columna-clara,
+  .tabla .columna-oscura {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  .tabla-encabezado .columna-clara,
+  .tabla-encabezado .columna-oscura {
+    background-color: #e6e6e6;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .tabla-encabezado .columna-oscura,
+  .tabla-fila .columna-oscura {
+    background-color: #333d3e;
+    color: #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .tabla-encabezado .columna-oscura {
+    border-top: none;
+  }
+  .tabla-izquierda, .tabla-derecha {
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 24px;
+  }
+  .tabla-fila .columna-clara {
+    border-top: 1px solid #e0e2e6;
+  }
+
+  .celda { display: flex; font-size: 13px; color: black; }
+  .celda-num { width: 40px; color: #4f9fd3; }
+  .celda-desc { flex: 1 1 auto; }
+  .celda-precio { width: 100px; justify-content: flex-end; }
+  .celda-cantidad { width: 120px; justify-content: center; }
+  .celda-total { flex: 1 1 auto; justify-content: flex-end; font-weight: 600; }
+
+  /* ===== TOTALES ===== */
+  .totales-fila { align-items: stretch; }
+
+  .totales-izquierda {
+    align-items: flex-end;
+    padding: 24px 28px;
+    gap: 6px;
+  }
+  .totales-etiquetas { display: flex; flex-direction: column; gap: 8px; width: 220px; }
+
+  .totales-derecha {
+    align-items: stretch;
+    justify-content: center;
+    padding: 24px 28px;
+    gap: 8px;
+  }
+
+  .linea-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .totales-izquierda .linea-total { justify-content: flex-end; gap: 24px; }
+  .totales-derecha .linea-total { justify-content: flex-end; }
+  .etiqueta-total { font-size: 15px; }
+
+  /* ===== PIE DE PÁGINA ===== */
+  .pie-fila { align-items: stretch; }
+  .pie-izquierda { padding: 8px 28px 32px; gap: 24px; }
+
+  .terminos { display: flex; flex-direction: column; gap: 8px; }
+  .pago { display: flex; flex-direction: column; gap: 14px; }
+
+  .opciones-pago { display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; }
+  .opcion-pago {
+    display: flex; flex-direction: row; align-items: center;
+    gap: 8px; font-size: 12px; color: #2b2b2b;
+  }
+  .radio {
+    display: inline-flex; width: 12px; height: 12px;
+    border: 1px solid #999; border-radius: 50%; flex-shrink: 0;
+  }
+
+  .campo-pago {
+    display: flex; flex-direction: row; align-items: center;
+    gap: 10px; flex-wrap: wrap;
+  }
+  .etiqueta-pago, .subetiequeta-pago { font-size: 12px; color: #2b2b2b; }
+  .input-pago {
+    display: inline-flex; height: 18px;
+    background-color: #e6e6e6;
+    border: 1px solid #999;
+  }
+  .input-pago-grande { width: 320px; }
+  .input-pago-mediano { width: 140px; }
+  .input-pago-pequeño { width: 60px; }
+
+  /* ===== FIRMA ===== */
+  .firma {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 56px 28px 40px;
+  }
+  .firma-interior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-top: 60px;
+  }
+  .linea-firma { display: inline-flex; width: 220px; height: 1px; background-color: #ffffff; }
+  .texto-firma { font-size: 14px; color: #ffffff; }
+
+  /* =========================================================
+     MEDIA QUERIES — al final del CSS
+     ========================================================= */
+  @media (max-width: 880px) {
+    body { padding: 12px 0; }
+    .factura { width: 100%; }
+
+    .fila { flex-direction: column; }
+
+    .columna-clara, .columna-oscura {
+      width: auto;
+      flex: 1 1 auto;
+    }
+
+    .notas-izquierda { flex-direction: column; gap: 20px; }
+    .bloque-notas-derecha { align-items: flex-start; text-align: left; }
+
+    .meta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 20px;
+    }
+
+    .tabla { flex-direction: column; min-width: 640px; }
+    .tabla-encabezado.fila, .tabla-fila.fila { flex-direction: row; }
+    .tabla-encabezado .columna-clara, .tabla-encabezado .columna-oscura,
+    .tabla-fila .columna-clara, .tabla-fila .columna-oscura {
+      width: auto;
+      flex: 1 1 auto;
+    }
+
+    .totales-izquierda { display: none; }
+    .totales-derecha {
+      display: flex;
+      background-color: #394346;
+      color: #ffffff;
+      padding: 22px 24px;
+      gap: 10px;
+    }
+    .totales-derecha .linea-total {
+      justify-content: space-between;
+      color: #ffffff;
+    }
+    .totales-derecha .linea-total::before {
+      content: attr(data-etiqueta);
+      font-weight: 700;
+    }
+
+    .input-pago-grande { width: 100%; max-width: 320px; }
+  }
+
+  @media (max-width: 599px) {
+    .tabla,
+    .tabla-contenedor,
+    .tabla .columna-clara,
+    .tabla .columna-oscura,
+    .tabla-encabezado .columna-clara,
+    .tabla-encabezado .columna-oscura,
+    .tabla-fila .columna-clara,
+    .tabla-fila .columna-oscura {
+      background-color: #f2f2f2 !important;
+      color: black !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .marca-nombre { font-size: 16px; letter-spacing: 1px; }
+    .titulo-factura { font-size: 26px; letter-spacing: 4px; }
+    .meta { flex-direction: column; align-items: flex-start; }
+    .meta-elemento { align-items: flex-start; }
+    .meta-etiqueta { text-align: left; }
+  }
+</style>
+
+</html>
