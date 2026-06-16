@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Esto hace que la pagina sea responsiva en el celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHLOX - Tienda de Tecnologia</title>
+  <!-- Aqui conectamos el archivo de estilos CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- CONTENEDOR PRINCIPAL BLANCO (todo va dentro de aqui)          -->
+  <!-- ============================================================= -->
+  <div class="contenedor">
+
+    <!-- ========================================================= -->
+    <!-- HEADER (barra de arriba)                                  -->
+    <!-- ========================================================= -->
+    <header class="header">
+
+      <!-- Lado izquierdo: logo + menu -->
+      <div class="header-izquierda">
+        <h1 class="logo">PHLOX</h1>
+        <nav class="menu">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+
+      <!-- Lado derecho: iconos -->
+      <div class="header-derecha">
+        <!-- Icono de buscar -->
+        <svg viewBox="0 0 24 24" class="icono"><circle cx="11" cy="11" r="7" fill="none" stroke="#2196f3" stroke-width="2"/><line x1="16" y1="16" x2="21" y2="21" stroke="#2196f3" stroke-width="2"/></svg>
+        <!-- Icono de carrito -->
+        <svg viewBox="0 0 24 24" class="icono"><path d="M3 4h2l2 12h10l2-8H7" fill="none" stroke="#e53935" stroke-width="2"/><circle cx="9" cy="20" r="1.5" fill="#e53935"/><circle cx="17" cy="20" r="1.5" fill="#e53935"/></svg>
+        <!-- Icono de usuario -->
+        <svg viewBox="0 0 24 24" class="icono"><circle cx="12" cy="8" r="4" fill="#2196f3"/><path d="M4 21c0-5 4-7 8-7s8 2 8 7" fill="#2196f3"/></svg>
+      </div>
+
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO (banner grande principal)                            -->
+    <!-- ========================================================= -->
+    <section class="hero">
+
+      <!-- Texto del lado izquierdo -->
+      <div class="hero-texto">
+        <p class="hero-mini">Boots Solo</p>
+        <h2 class="hero-titulo">Wireless</h2>
+        <h2 class="hero-subtitulo">HEADPHONE</h2>
+        <button class="boton-rojo">Shop By Category</button>
+      </div>
+
+      <!-- Imagen del centro -->
+      <div class="hero-imagen">
+        <img src="images/headphones-black.png" alt="Audifonos negros inalambricos" />
+      </div>
+
+      <!-- Texto decorativo del lado derecho -->
+      <div class="hero-descripcion">
+        <h3>Description</h3>
+        <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TARJETAS DE PRODUCTOS (fila 1)                            -->
+    <!-- ========================================================= -->
+    <section class="tarjetas">
+
+      <!-- Tarjeta negra: Earphones -->
+      <div class="tarjeta tarjeta-negra">
+        <div class="tarjeta-texto">
+          <p class="tarjeta-mini">Enjoy</p>
+          <h3>With</h3>
+          <p class="tarjeta-gris-txt">EARPHONE</p>
+          <button class="boton-blanco">Shop</button>
+        </div>
+        <img src="images/earphones.png" alt="Audifonos rojos" />
+      </div>
+
+      <!-- Tarjeta amarilla: Smartwatch -->
+      <div class="tarjeta tarjeta-amarilla">
+        <div class="tarjeta-texto">
+          <h3>Wear</h3>
+          <button class="boton-blanco">Browse</button>
+        </div>
+        <img src="images/smartwatch.png" alt="Reloj inteligente" />
+      </div>
+
+      <!-- Tarjeta roja: Laptop -->
+      <div class="tarjeta tarjeta-roja">
+        <div class="tarjeta-texto">
+          <p class="tarjeta-mini">Cool</p>
+          <h3>Devices</h3>
+          <p class="tarjeta-claro">LAPTOP</p>
+          <button class="boton-blanco">Browse</button>
+        </div>
+        <img src="images/laptop.png" alt="Laptop" />
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TARJETAS DE PRODUCTOS (fila 2)                            -->
+    <!-- ========================================================= -->
+    <section class="tarjetas">
+
+      <!-- Tarjeta gris: Gaming -->
+      <div class="tarjeta tarjeta-gris">
+        <div class="tarjeta-texto">
+          <p class="tarjeta-mini">Best</p>
+          <h3>Gaming</h3>
+          <p class="tarjeta-gris2">CONSOLE</p>
+          <button class="boton-rojo">Browse</button>
+        </div>
+        <img src="images/console.png" alt="Consola de videojuegos" />
+      </div>
+
+      <!-- Tarjeta verde: VR -->
+      <div class="tarjeta tarjeta-verde">
+        <div class="tarjeta-texto">
+          <p class="tarjeta-mini">Try</p>
+          <h3>Game</h3>
+          <button class="boton-blanco">Browse</button>
+        </div>
+        <img src="images/vr.png" alt="Persona usando gafas de realidad virtual" />
+      </div>
+
+      <!-- Tarjeta azul: Speaker -->
+      <div class="tarjeta tarjeta-azul">
+        <div class="tarjeta-texto">
+          <p class="tarjeta-mini">New</p>
+          <h3>Amazon</h3>
+          <button class="boton-blanco">Browse</button>
+        </div>
+        <img src="images/speaker.png" alt="Bocina inteligente" />
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ICONOS DE SERVICIOS (beneficios)                          -->
+    <!-- ========================================================= -->
+    <section class="servicios">
+
+      <div class="servicio">
+        <svg viewBox="0 0 24 24" class="icono-servicio"><rect x="1" y="6" width="13" height="9" fill="#4caf50"/><path d="M14 9h4l3 3v3h-7z" fill="#388e3c"/><circle cx="6" cy="17" r="2" fill="#222"/><circle cx="17" cy="17" r="2" fill="#222"/></svg>
+        <div>
+          <h4>Free Shipping</h4>
+          <p>On order over $100</p>
+        </div>
+      </div>
+
+      <div class="servicio">
+        <svg viewBox="0 0 24 24" class="icono-servicio"><circle cx="12" cy="12" r="9" fill="#ffc107"/><text x="12" y="16" font-size="10" text-anchor="middle" fill="#222">$</text></svg>
+        <div>
+          <h4>Money Guarantee</h4>
+          <p>30 Day Money Back</p>
+        </div>
+      </div>
+
+      <div class="servicio">
+        <svg viewBox="0 0 24 24" class="icono-servicio"><path d="M4 13a8 8 0 0116 0" fill="none" stroke="#2196f3" stroke-width="2"/><rect x="3" y="13" width="3" height="6" rx="1" fill="#2196f3"/><rect x="18" y="13" width="3" height="6" rx="1" fill="#2196f3"/></svg>
+        <div>
+          <h4>Online Support 24/7</h4>
+          <p>Technical Support</p>
+        </div>
+      </div>
+
+      <div class="servicio">
+        <svg viewBox="0 0 24 24" class="icono-servicio"><rect x="2" y="6" width="20" height="12" rx="2" fill="#e53935"/><rect x="2" y="9" width="20" height="2" fill="#222"/></svg>
+        <div>
+          <h4>Secure Payment</h4>
+          <p>All Cards Accepted</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- BANNER INFERIOR ROJO                                      -->
+    <!-- ========================================================= -->
+    <section class="banner-rojo">
+
+      <!-- Texto izquierda -->
+      <div class="banner-izquierda">
+        <p class="banner-mini">30 % OFF</p>
+        <h2>FINE</h2>
+        <h2>SMILE</h2>
+        <p class="banner-mini">15 Nov To 7 Dec</p>
+      </div>
+
+      <!-- Imagen centro -->
+      <div class="banner-imagen">
+        <img src="images/headphones-red.png" alt="Audifonos rojos" />
+      </div>
+
+      <!-- Texto derecha -->
+      <div class="banner-derecha">
+        <p class="banner-mini">Boots 380 AB</p>
+        <h2>Summer Sale</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+        <button class="boton-blanco">Shop</button>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECCION FINAL                                             -->
+    <!-- ========================================================= -->
+    <section class="final">
+      <h2>Best Seller Products</h2>
+      <p>Popular. There are many variations passages.</p>
+    </section>
+
+  </div>
+
+</body>
+</html>

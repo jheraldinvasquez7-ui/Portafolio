@@ -1,0 +1,399 @@
+/* ============================================================= */
+/* ESTILOS GENERALES                                             */
+/* ============================================================= */
+
+/* Quitamos margenes que trae el navegador por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo oscuro alrededor de toda la pagina */
+body {
+  background: #111111;
+  padding: 20px;
+}
+
+/* Contenedor principal blanco que abarca toda la pantalla */
+.contenedor {
+  background: #ffffff;
+  width: 100%;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* ============================================================= */
+/* HEADER                                                        */
+/* ============================================================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Lado izquierdo del header */
+.header-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  color: #e53935;
+  font-size: 26px;
+}
+
+/* Menu de navegacion */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Lado derecho del header */
+.header-derecha {
+  display: flex;
+  gap: 15px;
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============================================================= */
+/* HERO (banner principal)                                       */
+/* ============================================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.hero-mini {
+  color: #555555;
+  font-size: 16px;
+}
+
+.hero-titulo {
+  color: #111111;
+  font-size: 60px;
+}
+
+.hero-subtitulo {
+  color: #cccccc;
+  font-size: 50px;
+}
+
+.hero-imagen img {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-descripcion {
+  width: 200px;
+}
+
+.hero-descripcion h3 {
+  color: #111111;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.hero-descripcion p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* ============================================================= */
+/* BOTONES                                                       */
+/* ============================================================= */
+
+.boton-rojo {
+  background: #e53935;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.boton-blanco {
+  background: #ffffff;
+  color: #111111;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ============================================================= */
+/* TARJETAS DE PRODUCTOS                                         */
+/* ============================================================= */
+
+.tarjetas {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  border-radius: 15px;
+  padding: 25px;
+  height: 180px;
+}
+
+.tarjeta img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tarjeta h3 {
+  font-size: 26px;
+}
+
+.tarjeta-mini {
+  font-size: 14px;
+}
+
+/* Colores de cada tarjeta */
+.tarjeta-negra {
+  background: #222222;
+  color: #ffffff;
+}
+
+.tarjeta-amarilla {
+  background: #f9c80e;
+  color: #111111;
+}
+
+.tarjeta-roja {
+  background: #e53935;
+  color: #ffffff;
+}
+
+.tarjeta-gris-txt {
+  color: #888888;
+}
+
+.tarjeta-gris2 {
+  color: #aaaaaa;
+}
+
+.tarjeta-claro {
+  color: #ffd2d0;
+}
+
+/* Tarjeta gris (gaming) */
+.tarjeta-gris {
+  background: #f0f0f0;
+  color: #111111;
+}
+
+.tarjeta-verde {
+  background: #2ecc71;
+  color: #ffffff;
+}
+
+.tarjeta-azul {
+  background: #2196f3;
+  color: #ffffff;
+}
+
+/* ============================================================= */
+/* ICONOS DE SERVICIOS                                           */
+/* ============================================================= */
+
+.servicios {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.servicio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-servicio {
+  width: 40px;
+  height: 40px;
+}
+
+.servicio h4 {
+  font-size: 15px;
+  color: #111111;
+}
+
+.servicio p {
+  font-size: 13px;
+  color: #777777;
+}
+
+/* ============================================================= */
+/* BANNER INFERIOR ROJO                                          */
+/* ============================================================= */
+
+.banner-rojo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #e53935;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 30px;
+}
+
+.banner-izquierda h2 {
+  font-size: 45px;
+}
+
+.banner-derecha {
+  width: 280px;
+}
+
+.banner-derecha h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.banner-derecha p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.banner-mini {
+  font-size: 15px;
+}
+
+.banner-imagen img {
+  width: 250px;
+  height: auto;
+}
+
+/* ============================================================= */
+/* SECCION FINAL                                                 */
+/* ============================================================= */
+
+.final {
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+.final h2 {
+  font-size: 30px;
+  color: #111111;
+}
+
+.final p {
+  font-size: 15px;
+  color: #777777;
+  margin-top: 10px;
+}
+
+/* ============================================================= */
+/* RESPONSIVE - CELULAR (pantallas pequenas)                     */
+/* ============================================================= */
+
+@media screen and (max-width: 600px) {
+
+  /* El menu y el header se acomodan en columna */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-izquierda {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* El hero se pone vertical */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .hero-titulo {
+    font-size: 40px;
+  }
+
+  .hero-subtitulo {
+    font-size: 32px;
+  }
+
+  .hero-imagen img {
+    width: 220px;
+  }
+
+  .hero-descripcion {
+    width: 100%;
+  }
+
+  /* Las tarjetas bajan una debajo de otra */
+  .tarjetas {
+    flex-direction: column;
+  }
+
+  .tarjeta img {
+    width: 90px;
+  }
+
+  /* Los servicios se ponen en columna */
+  .servicios {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* El banner rojo se pone vertical */
+  .banner-rojo {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .banner-imagen img {
+    width: 180px;
+  }
+
+  .banner-derecha {
+    width: 100%;
+  }
+}
