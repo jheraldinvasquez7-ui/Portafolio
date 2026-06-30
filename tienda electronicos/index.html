@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHLOX - Tienda de Tecnología</title>
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- CONTENEDOR GENERAL DE LA PÁGINA                       -->
+  <!-- ===================================================== -->
+  <div class="contenedor">
+
+    <!-- ===================================================== -->
+    <!-- MENÚ SUPERIOR / BARRA DE NAVEGACIÓN                   -->
+    <!-- ===================================================== -->
+    <header class="navbar">
+      <!-- Lado izquierdo: Logo -->
+      <a href="#" class="logo">PHLOX</a>
+
+      <!-- Centro: Enlaces de navegación -->
+      <nav class="nav-links">
+        <a href="#" class="activo">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <!-- Lado derecho: Iconos (imágenes) -->
+      <div class="nav-iconos">
+        <a href="#"><img src="img/icon-user.png" alt="Cuenta de usuario"></a>
+        <a href="#"><img src="img/icon-search.png" alt="Buscar"></a>
+        <a href="#"><img src="img/icon-cart.png" alt="Carrito de compras"></a>
+      </div>
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- BANNER PRINCIPAL (HERO)                               -->
+    <!-- ===================================================== -->
+    <section class="hero">
+      <!-- Texto decorativo gigante difuminado de fondo -->
+      <span class="hero-texto-fondo">HEADPHONES</span>
+
+      <!-- Zona izquierda: textos y botón -->
+      <div class="hero-texto">
+        <p class="hero-pequeno">Beats Solo</p>
+        <h1 class="hero-titulo">Wireless</h1>
+        <a href="#" class="boton-rojo">Shop By Category</a>
+      </div>
+
+      <!-- Zona central: imagen principal del producto -->
+      <div class="hero-imagen">
+        <img src="img/audifonos-principal.png" alt="Audífonos inalámbricos Beats Solo">
+      </div>
+
+      <!-- Zona derecha: texto descriptivo -->
+      <div class="hero-descripcion">
+        <h3>Conultation</h3>
+        <p>
+          Discover powerful sound and comfortable
+          for all day fletening. Op to 46 hours of battery life.
+          Experience the wireless freedom you crave.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- SEGUNDA FILA: TRES TARJETAS DE CATEGORÍA              -->
+    <!-- ===================================================== -->
+    <section class="fila-tarjetas">
+
+      <!-- TARJETA 1: NEGRA - Earphones -->
+      <article class="tarjeta tarjeta-negra">
+        <div class="tarjeta-info">
+          <p class="tarjeta-trend">Trend</p>
+          <h3>With</h3>
+          <a href="#" class="boton-rojo boton-pequeno">Step icp</a>
+        </div>
+        <span class="tarjeta-texto-fondo">EARPHONE</span>
+        <img class="tarjeta-img" src="img/audifonos-negro.png" alt="Audífonos in-ear deportivos">
+      </article>
+
+      <!-- TARJETA 2: AMARILLA - Smart Watch -->
+      <article class="tarjeta tarjeta-amarilla">
+        <div class="tarjeta-info">
+          <p class="tarjeta-trend">Trend</p>
+          <h3>Smart</h3>
+          <a href="#" class="boton-blanco boton-pequeno">Browse</a>
+        </div>
+        <span class="tarjeta-texto-fondo">WA</span>
+        <img class="tarjeta-img" src="img/reloj.png" alt="Reloj inteligente amarillo">
+      </article>
+
+      <!-- TARJETA 3: ROJA - Laptop -->
+      <article class="tarjeta tarjeta-roja">
+        <div class="tarjeta-info">
+          <p class="tarjeta-trend">Trend</p>
+          <h3>Devices</h3>
+          <a href="#" class="boton-blanco boton-pequeno">Details</a>
+        </div>
+        <span class="tarjeta-texto-fondo">LAPTOP</span>
+        <img class="tarjeta-img" src="img/laptop.png" alt="Laptop con pantalla colorida">
+      </article>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- TERCERA FILA: TRES TARJETAS DE CATEGORÍA              -->
+    <!-- ===================================================== -->
+    <section class="fila-tarjetas fila-tarjetas-2">
+
+      <!-- TARJETA 1: BLANCA (ancha) - Gaming Console -->
+      <article class="tarjeta tarjeta-blanca tarjeta-ancha">
+        <div class="tarjeta-info">
+          <p class="tarjeta-trend">Best</p>
+          <h3>Gaming</h3>
+          <a href="#" class="boton-rojo boton-pequeno">Browse</a>
+        </div>
+        <span class="tarjeta-texto-fondo">CONSOLE</span>
+        <img class="tarjeta-img" src="img/consola.png" alt="Consola de videojuegos blanca">
+      </article>
+
+      <!-- TARJETA 2: VERDE - Oculus VR -->
+      <article class="tarjeta tarjeta-verde">
+        <div class="tarjeta-info">
+          <p class="tarjeta-new">New</p>
+          <h3>Oculus VR</h3>
+          <a href="#" class="boton-blanco boton-pequeno">Browse</a>
+        </div>
+        <span class="tarjeta-texto-fondo">OCULUS</span>
+        <img class="tarjeta-img tarjeta-img-completa" src="img/asistente.png" alt="Persona usando gafas de realidad virtual">
+      </article>
+
+      <!-- TARJETA 3: AZUL - Amazon Speaker -->
+      <article class="tarjeta tarjeta-azul">
+        <div class="tarjeta-info">
+          <p class="tarjeta-new">New</p>
+          <h3>Amazon</h3>
+          <a href="#" class="boton-blanco boton-pequeno">Browse</a>
+        </div>
+        <span class="tarjeta-texto-fondo">SPEAKER</span>
+        <img class="tarjeta-img" src="img/vr.png" alt="Asistente de voz tipo altavoz inteligente">
+      </article>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- FILA DE BENEFICIOS                                    -->
+    <!-- ===================================================== -->
+    <section class="beneficios">
+
+      <!-- Beneficio 1 -->
+      <div class="beneficio">
+        <img src="img/icon-envio.png" alt="Icono de envío gratis">
+        <div class="beneficio-texto">
+          <h4>Free Shipping</h4>
+          <p>Ship phippmg cavs onine</p>
+        </div>
+      </div>
+
+      <!-- Beneficio 2 -->
+      <div class="beneficio">
+        <img src="img/icon-garantia.png" alt="Icono de garantía de devolución">
+        <div class="beneficio-texto">
+          <h4>Money Guarantee</h4>
+          <p>Geit to Money Cats</p>
+        </div>
+      </div>
+
+      <!-- Beneficio 3 -->
+      <div class="beneficio">
+        <img src="img/icon-soporte.png" alt="Icono de soporte en línea">
+        <div class="beneficio-texto">
+          <h4>Online Support 24/7</h4>
+          <p>Aciiiine Support 24/7</p>
+        </div>
+      </div>
+
+      <!-- Beneficio 4 -->
+      <div class="beneficio">
+        <img src="img/icon-pago.png" alt="Icono de pago seguro">
+        <div class="beneficio-texto">
+          <h4>Secure Payment</h4>
+          <p>Ailrt card adderedt</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- BANNER PROMOCIONAL INFERIOR (ROJO)                    -->
+    <!-- ===================================================== -->
+    <section class="banner-promo">
+      <!-- Texto decorativo gigante difuminado de fondo -->
+      <span class="promo-texto-fondo">EJERCICIO</span>
+
+      <!-- Imagen del producto que sobresale -->
+      <div class="promo-imagen">
+        <img src="img/audifonos-banner.png" alt="Audífonos rojos en oferta">
+      </div>
+
+      <!-- Texto del lado izquierdo -->
+      <div class="promo-izquierda">
+        <p class="promo-descuento">20% OFF</p>
+        <h2>FINAL<br>SMILE</h2>
+        <p class="promo-fecha">11 May 13 to Dec 7</p>
+      </div>
+
+      <!-- Texto del lado derecho -->
+      <div class="promo-derecha">
+        <p class="promo-mini">Many to to Dirt</p>
+        <h2>Summer Sale</h2>
+        <p class="promo-detalle">
+          Cmment V600 Sheighong, 270ls and
+          employees freedom you crave.
+        </p>
+        <a href="#" class="boton-blanco">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- BEST SELLER PRODUCTS                                  -->
+    <!-- ===================================================== -->
+    <section class="best-seller">
+      <h2>Best Seller Products</h2>
+      <p>Spokler There are many vehiiclers masoges</p>
+    </section>
+
+  </div>
+</body>
+</html>

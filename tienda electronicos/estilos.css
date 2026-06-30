@@ -1,0 +1,613 @@
+/* ===================================================== */
+/* RESET BÁSICO                                          */
+/* ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* La página ocupa toda la ventana, como un sitio real */
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===================================================== */
+/* CONTENEDOR GENERAL                                    */
+/* Ocupa ~92% del ancho de la ventana con márgenes        */
+/* laterales elegantes, como un e-commerce moderno.       */
+/* ===================================================== */
+.contenedor {
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 24px 0;
+  overflow: hidden;
+}
+
+/* ===================================================== */
+/* MENÚ SUPERIOR / NAVBAR                                */
+/* ===================================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 22px;
+}
+
+.logo {
+  color: #ff2b2b;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Enlaces centrales del menú */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.nav-links a.activo {
+  font-weight: bold;
+}
+
+/* Iconos del lado derecho (imágenes) */
+.nav-iconos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-iconos img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===================================================== */
+/* BANNER PRINCIPAL (HERO)                               */
+/* ===================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ededed;
+  border-radius: 16px;
+  padding: 50px 45px;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+/* Texto gigante decorativo y difuminado de fondo */
+.hero-texto-fondo {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0.7;
+  letter-spacing: 4px;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Zona izquierda de textos del hero */
+.hero-texto {
+  position: relative;
+  z-index: 3;
+  max-width: 240px;
+}
+
+.hero-pequeno {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.hero-titulo {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+/* Imagen central del producto (por encima del texto de fondo) */
+.hero-imagen {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-imagen img {
+  max-height: 340px;
+  width: auto;
+  /* La imagen JPEG tiene fondo blanco: lo fundimos con el gris claro del hero */
+  mix-blend-mode: multiply;
+}
+
+/* Zona derecha de descripción */
+/* Se baja un poco para coincidir con la referencia */
+.hero-descripcion {
+  position: relative;
+  z-index: 3;
+  max-width: 220px;
+  text-align: right;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.hero-descripcion h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.hero-descripcion p {
+  font-size: 12px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* ===================================================== */
+/* BOTONES REUTILIZABLES                                 */
+/* ===================================================== */
+.boton-rojo {
+  display: inline-block;
+  background-color: #ff2b2b;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 12px 26px;
+  border-radius: 30px;
+}
+
+.boton-blanco {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+
+.boton-pequeno {
+  font-size: 12px;
+  padding: 7px 18px;
+}
+
+/* ===================================================== */
+/* FILAS DE TARJETAS (SEGUNDA Y TERCERA)                 */
+/* ===================================================== */
+.fila-tarjetas {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Tarjeta genérica */
+.tarjeta {
+  position: relative;
+  flex: 1;
+  border-radius: 14px;
+  padding: 26px;
+  /* Tarjetas más altas (~20% más) para que el contenido respire */
+  min-height: 250px;
+  overflow: hidden;
+  display: flex;
+  /* La info se ancla arriba; el texto decorativo va abajo */
+  align-items: flex-start;
+}
+
+/* Información (texto y botón) de cada tarjeta */
+.tarjeta-info {
+  position: relative;
+  z-index: 3;
+}
+
+.tarjeta-info h3 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.tarjeta-trend,
+.tarjeta-new {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* Texto gigante decorativo difuminado dentro de la tarjeta */
+/* Se ancla abajo, detrás del contenido, sin chocar con el título */
+.tarjeta-texto-fondo {
+  position: absolute;
+  left: 26px;
+  bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0.14;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Imagen del producto dentro de la tarjeta (a la derecha) */
+/* Un poco más grande (~20%) y separada de los bordes */
+.tarjeta-img {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 180px;
+  width: auto;
+  z-index: 2;
+}
+
+/* Imagen que ocupa toda la tarjeta (VR) */
+.tarjeta-img-completa {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  transform: none;
+  max-height: 100%;
+  border-radius: 0 14px 14px 0;
+}
+
+/* Tarjeta que ocupa más ancho */
+.tarjeta-ancha {
+  flex: 1.7;
+}
+
+.tarjeta-roja.tarjeta {
+  flex: 1.7;
+}
+
+/* --- Colores de las tarjetas --- */
+.tarjeta-negra {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.tarjeta-amarilla {
+  background-color: #f7c600;
+  color: #1a1a1a;
+}
+
+.tarjeta-roja {
+  background-color: #ff2b2b;
+  color: #ffffff;
+}
+
+.tarjeta-blanca {
+  background-color: #eeeeee;
+  color: #1a1a1a;
+}
+
+/* Fundimos el fondo blanco del JPEG con el gris claro de la tarjeta */
+.tarjeta-blanca .tarjeta-img {
+  mix-blend-mode: multiply;
+}
+
+.tarjeta-verde {
+  background-color: #1db954;
+  color: #ffffff;
+}
+
+.tarjeta-azul {
+  background-color: #1e7bff;
+  color: #ffffff;
+}
+
+/* ===================================================== */
+/* FILA DE BENEFICIOS                                    */
+/* ===================================================== */
+.beneficios {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 40px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.beneficio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.beneficio img {
+  width: 34px;
+  height: 34px;
+}
+
+.beneficio-texto h4 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.beneficio-texto p {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* ===================================================== */
+/* BANNER PROMOCIONAL INFERIOR (ROJO)                    */
+/* ===================================================== */
+.banner-promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff2b2b;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 55px 50px;
+  margin-top: 90px;
+  min-height: 260px;
+}
+
+/* Imagen del producto: protagonista, grande y sobrepuesta */
+/* al texto del lado izquierdo (FINAL SMILE) */
+.promo-imagen {
+  position: absolute;
+  left: 26%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.promo-imagen img {
+  max-height: 420px;
+  width: auto;
+}
+
+/* Texto del lado izquierdo (queda detrás de la imagen) */
+.promo-izquierda {
+  position: relative;
+  z-index: 1;
+}
+
+.promo-descuento {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.promo-izquierda h2 {
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 0.95;
+  margin-bottom: 10px;
+}
+
+.promo-fecha {
+  font-size: 12px;
+}
+
+/* Texto del lado derecho */
+.promo-derecha {
+  position: relative;
+  z-index: 3;
+  text-align: right;
+  max-width: 240px;
+}
+
+.promo-mini {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.promo-derecha h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.promo-detalle {
+  font-size: 12px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* ===================================================== */
+/* BEST SELLER PRODUCTS                                  */
+/* ===================================================== */
+.best-seller {
+  text-align: center;
+  padding: 55px 10px 35px;
+}
+
+.best-seller h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.best-seller p {
+  font-size: 13px;
+  color: #888888;
+}
+
+/* ===================================================== */
+/* RESPONSIVE - TABLET                                   */
+/* min-width: 481px y max-width: 884px                   */
+/* ===================================================== */
+@media (min-width: 481px) and (max-width: 884px) {
+
+  /* El hero pasa a columna */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-texto,
+  .hero-descripcion {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-texto-fondo {
+    font-size: 90px;
+  }
+
+  /* Las tarjetas se acomodan en dos columnas */
+  .fila-tarjetas {
+    flex-wrap: wrap;
+  }
+
+  .tarjeta {
+    flex: 1 1 45%;
+  }
+
+  .tarjeta-ancha,
+  .tarjeta-roja.tarjeta {
+    flex: 1 1 100%;
+  }
+
+  /* Beneficios en dos columnas */
+  .beneficios {
+    flex-wrap: wrap;
+  }
+
+  .beneficio {
+    flex: 1 1 40%;
+  }
+
+  /* Banner promocional en columna; imagen centrada arriba */
+  .banner-promo {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    padding-top: 260px;
+  }
+
+  .promo-imagen {
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+  }
+
+  .promo-imagen img {
+    max-height: 300px;
+  }
+
+  .promo-izquierda h2 {
+    font-size: 52px;
+  }
+
+  .promo-derecha {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* ===================================================== */
+/* RESPONSIVE - MÓVIL                                    */
+/* max-width: 480px                                      */
+/* ===================================================== */
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  /* Navbar en columna */
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  /* Hero en columna */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-texto,
+  .hero-descripcion {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-titulo {
+    font-size: 40px;
+  }
+
+  .hero-texto-fondo {
+    font-size: 56px;
+  }
+
+  .hero-imagen img {
+    max-height: 240px;
+  }
+
+  /* Todas las tarjetas en una sola columna */
+  .fila-tarjetas {
+    flex-direction: column;
+  }
+
+  .tarjeta {
+    flex: 1 1 100%;
+    min-height: 230px;
+  }
+
+  /* Beneficios en una sola columna */
+  .beneficios {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* Banner promocional en columna con espacio para la imagen */
+  .banner-promo {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding-top: 220px;
+  }
+
+  .promo-imagen {
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  .promo-imagen img {
+    max-height: 240px;
+  }
+
+  .promo-izquierda h2 {
+    font-size: 46px;
+  }
+
+  .promo-derecha {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .best-seller h2 {
+    font-size: 24px;
+  }
+}
