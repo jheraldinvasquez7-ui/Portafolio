@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario Aleatorio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <div class="barra"></div>
+
+        <div class="encabezado">
+
+            <img id="foto" src="" alt="Foto de usuario" class="foto">
+
+            <h1 id="nombre">Cargando...</h1>
+
+            <p class="correo">
+                <i class="fa-solid fa-envelope"></i>
+                <span id="correo"></span>
+            </p>
+
+            <div class="telefonos">
+                <span><i class="fa-solid fa-phone"></i> <span id="telefono"></span></span>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> <span id="celular"></span></span>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="informacion">
+
+            <div class="columna">
+
+                <div class="dato">
+                    <div class="icono">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div>
+                        <h3>Fecha de nacimiento</h3>
+                        <p id="fechaNacimiento"></p>
+                        <small id="edad"></small>
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <div class="icono">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3>Ubicación</h3>
+                        <p id="ubicacion"></p>
+                        <small id="codigoPostal"></small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="columna">
+
+                <div class="dato">
+                    <div class="icono">
+                        <i class="fa-solid fa-file-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Registrado</h3>
+                        <p id="registro"></p>
+                        <small id="registroEdad"></small>
+                    </div>
+                </div>
+
+                <div class="dato">
+                    <div class="icono">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h3>Identificación</h3>
+                        <p id="identificacion"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

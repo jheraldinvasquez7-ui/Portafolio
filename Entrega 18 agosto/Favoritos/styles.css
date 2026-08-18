@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    background: #f1f5ff;
+    font-family: Arial, sans-serif;
+    color: #263238;
+}
+
+.topbar {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.topbar h1 {
+    margin: 0;
+}
+
+.volver {
+    text-decoration: none;
+    background: #6f4d99;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.favoritos {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.favorito-card {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.favorito-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 14px;
+    border: 4px solid #eee9ff;
+}
+
+.favorito-info h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.favorito-info p {
+    margin: 0 0 14px;
+    color: #555;
+    word-break: break-word;
+}
+
+.quitar {
+    border: none;
+    background: #a11d1d;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.vacio {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
